@@ -12,6 +12,7 @@ public class MainActivity extends WearableActivity {
     private TextView tv_time;
     private TextView tv_date;
     private PirateDate p = new PirateDate();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,19 +21,16 @@ public class MainActivity extends WearableActivity {
         tv_time = (TextView) findViewById(R.id.tv_time);
         tv_date = (TextView) findViewById(R.id.tv_date);
 
-        timer.schedule(new TimerTask()
-        {
+        timer.schedule(new TimerTask() {
             @Override
-            public void run()
-            {
+            public void run() {
                 runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
-
                         p.updateCurrentTime();
                         tv_time.setText(p.getAmPmTime());
-                        tv_date.setText(p.getDayText() );
+                        tv_date.setText(p.getDayText());
 
                     }
                 });
