@@ -49,14 +49,6 @@ public class PirateDate {
         }
     }
 
-    public String getHourText() {
-        return String.format("%02d", hour);
-    }
-
-    public String getMinuteText() {
-        return String.format("%02d", minute);
-    }
-
     public String getAmPmTime() {
         DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
         Calendar cal = Calendar.getInstance();
