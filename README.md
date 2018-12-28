@@ -4,12 +4,10 @@
 
 A wear os (android) app to show the in-game time and date of Sea of Thieves. 
 
-
-![wear screenshot](https://easterapps.de/assistant/sot/images/screenshot_wear.jpg " ")
+<img src="https://easterapps.de/assistant/sot/images/watch_face.jpg" alt="drawing" width="200"/>
 
 ## Next steps
 
-- Background and text font styles
-- Theming for Events
+- TODO
 
 
