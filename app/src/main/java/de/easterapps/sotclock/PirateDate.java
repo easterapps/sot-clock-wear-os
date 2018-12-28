@@ -50,7 +50,19 @@ public class PirateDate {
     }
 
     public String getAmPmTime() {
-        DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
+        DateFormat dateFormat = new SimpleDateFormat("hh.mm");
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, (int) hour);
+        cal.set(Calendar.MINUTE, (int) minute);
+        cal.set(Calendar.DAY_OF_MONTH, (int) day);
+        Date date = cal.getTime();
+
+        String dateString = dateFormat.format(date).toString();
+        return dateString;
+    }
+
+    public String getAmPm() {
+        DateFormat dateFormat = new SimpleDateFormat("aa");
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY, (int) hour);
         cal.set(Calendar.MINUTE, (int) minute);

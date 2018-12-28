@@ -11,6 +11,7 @@ public class MainActivity extends WearableActivity {
 
     private TextView tv_time;
     private TextView tv_date;
+    private TextView tv_timeframe;
     private PirateDate p = new PirateDate();
 
     @Override
@@ -20,6 +21,7 @@ public class MainActivity extends WearableActivity {
         Timer timer = new Timer();
         tv_time = (TextView) findViewById(R.id.tv_time);
         tv_date = (TextView) findViewById(R.id.tv_date);
+        tv_timeframe = (TextView) findViewById(R.id.tv_timeframe);
 
         timer.schedule(new TimerTask() {
             @Override
@@ -31,6 +33,7 @@ public class MainActivity extends WearableActivity {
                         p.updateCurrentTime();
                         tv_time.setText(p.getAmPmTime());
                         tv_date.setText(p.getDayText());
+                        tv_timeframe.setText(p.getAmPm());
 
                     }
                 });

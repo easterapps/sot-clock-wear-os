@@ -26,8 +26,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
+                android:fontFamily="@font/windlass"
                 android:text="00"
-                android:textSize="35sp" />
+                android:textSize="30sp" />
         </RelativeLayout>
 
         <ImageView
@@ -46,9 +47,23 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
 
-            android:layout_marginTop="104dp"
+            android:layout_marginTop="87dp"
+            android:fontFamily="@font/windlass"
             android:text="00:00"
+            android:textAlignment="center"
             android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tv_timeframe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="140dp"
+            android:fontFamily="@font/windlass"
+            android:text="AM"
+            android:textSize="30sp" />
 
     </RelativeLayout>
 </android.support.wear.widget.BoxInsetLayout>
